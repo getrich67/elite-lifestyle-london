@@ -1,0 +1,8 @@
+yarn run v1.22.22
+$ astro dev
+  🚀  astro  v2.10.15 started in 255ms
+  
+  ┃ Local    http://localhost:3000/
+  ┃ Network  use --host to expose
+  
+01:17:38 AM [astro] update /dev.log
