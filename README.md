@@ -1,47 +1,53 @@
-![Netlify examples](netlify-badge-examples.png)
+# Elite Lifestyle London
 
-# Netlify Feature Tour
+## Premium Luxury Lifestyle Management Services
 
-**Access this demo site**: https://feature-tour.netlify.app
+Elite Lifestyle London is a premier lifestyle management company serving London's most discerning clients. We provide bespoke concierge services, exclusive experiences, and comprehensive lifestyle solutions for high-net-worth individuals.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fad6792e-1c44-44db-bd79-ea74b42b0f89/deploy-status)](https://app.netlify.com/sites/feature-tour/deploys)
+### Features
 
-## About this example site
+- **Premium Design**: Sophisticated visual identity with luxury aesthetics
+- **Comprehensive Services**: Personal concierge, luxury transportation, event planning
+- **Expert Content**: 7 detailed blog posts covering luxury lifestyle topics
+- **Responsive Design**: Perfect experience across all devices
+- **Performance Optimized**: Fast loading with premium user experience
 
-This site provides a path to get started learning about Netlify features.
+### Services
 
-- 📚 [Docs Getting Started Tutorial](https://docs.netlify.com/get-started/?utm_medium=social&utm_source=github&utm_campaign=devex-ph&utm_content=devex-examples)
+- Personal Concierge Services
+- Luxury Transportation & Travel
+- Exclusive Event Planning
+- Property & Real Estate Management
+- Health & Wellness Programs
+- Cultural & Entertainment Access
 
-## Speedily deploy your own version
+### Technology Stack
 
-Deploy your own version of this example site by selecting the Deploy to Netlify Button below. This will automatically:
+- **Framework**: Astro 2.0
+- **Styling**: Custom CSS with modern design principles
+- **Typography**: Playfair Display + Inter
+- **Images**: High-quality curated visuals
+- **Deployment**: GitHub Pages
 
-- Clone a copy of this repo to your own GitHub account
-- Create a new project in your [Netlify account](https://app.netlify.com/?utm_medium=social&utm_source=github&utm_campaign=devex&utm_content=devex-examples), linked to your new repo
-- Create an automated deployment pipeline to watch for changes on your repo
-- Build and deploy your new site
+### Development
 
-[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify/netlify-feature-tour&utm_medium=social&utm_source=github&utm_campaign=devex&utm_content=devex-examples)
+```bash
+# Install dependencies
+yarn install
 
-## Install and run this example locally
+# Start development server
+yarn dev
 
-You can clone this example repo to explore its features and implementation and to run it locally.
-
-```shell
-
-# 1. Clone the repository to your local development environment
-git clone git@github.com:netlify/feature-tour.git
-
-# 2. Move into the project directory
-cd feature-tour
-
-# 3. Install code dependencies
-npm install
-
-# 4. Install the Netlify CLI to let you locally serve your site using Netlify's features
-npm install -g netlify-cli
-
-# 5. Serve your site using Netlify Dev
-netlify dev
-
+# Build for production
+yarn build
 ```
+
+### Contact
+
+📍 Mayfair, London, UK  
+📞 +44 20 7123 4567  
+✉️ info@elitelifestylelondon.com
+
+---
+
+*Elevating lifestyles in London since 2015*
