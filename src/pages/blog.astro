@@ -1,0 +1,618 @@
+---
+import Layout from '../components/Layout.astro';
+
+const blogPosts = [
+  {
+    id: 1,
+    title: "The Ultimate Guide to London's Hidden Luxury Experiences",
+    excerpt: "Discover exclusive venues, private clubs, and secret experiences that only London's elite know about.",
+    image: "https://images.unsplash.com/photo-1584618348664-30292c2746c0",
+    date: "March 15, 2025",
+    readTime: "8 min read",
+    category: "Exclusive Experiences"
+  },
+  {
+    id: 2,
+    title: "Mastering the Art of Luxury Event Planning in London",
+    excerpt: "From intimate dinner parties to grand celebrations, learn how to create unforgettable events in the capital.",
+    image: "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13",
+    date: "March 12, 2025",
+    readTime: "10 min read",
+    category: "Event Planning"
+  },
+  {
+    id: 3,
+    title: "London's Most Exclusive Private Members' Clubs: An Insider's Guide",
+    excerpt: "Navigate the world of London's prestigious private clubs and understand the culture of exclusivity.",
+    image: "https://images.unsplash.com/photo-1647923320920-9c9da74f7419",
+    date: "March 10, 2025",
+    readTime: "12 min read",
+    category: "Exclusive Access"
+  },
+  {
+    id: 4,
+    title: "The Psychology of Luxury: Understanding Premium Lifestyle Choices",
+    excerpt: "Explore the deeper motivations behind luxury consumption and how to make more meaningful lifestyle decisions.",
+    image: "https://images.unsplash.com/photo-1721206624552-d945fc1a3b8a",
+    date: "March 8, 2025",
+    readTime: "9 min read",
+    category: "Lifestyle Psychology"
+  },
+  {
+    id: 5,
+    title: "Seasonal Luxury: Maximizing London's Year-Round Premium Experiences",
+    excerpt: "From winter galas to summer garden parties, discover how to enjoy London's luxury scene throughout the year.",
+    image: "https://images.unsplash.com/photo-1560082200-552b9e34f3a3",
+    date: "March 5, 2025",
+    readTime: "11 min read",
+    category: "Seasonal Living"
+  },
+  {
+    id: 6,
+    title: "The Future of Luxury Travel: Trends Shaping Elite Tourism",
+    excerpt: "Examine emerging trends in luxury travel and how technology is revolutionizing premium experiences.",
+    image: "https://images.unsplash.com/photo-1659096074910-292765b21070",
+    date: "March 3, 2025",
+    readTime: "7 min read",
+    category: "Luxury Travel"
+  },
+  {
+    id: 7,
+    title: "Building Your Personal Brand: The Modern Elite's Guide to Social Capital",
+    excerpt: "Learn how to cultivate influence and build meaningful connections in London's high society circles.",
+    image: "https://images.pexels.com/photos/8728559/pexels-photo-8728559.jpeg",
+    date: "March 1, 2025",
+    readTime: "13 min read",
+    category: "Personal Development"
+  }
+];
+---
+
+<Layout
+  title="Blog - Elite Lifestyle London"
+  description="Insights, tips, and exclusive content about luxury lifestyle, London culture, and premium experiences from Elite Lifestyle London."
+>
+  <!-- Hero Section -->
+  <section class="blog-hero">
+    <div class="hero-background">
+      <img src="https://images.unsplash.com/photo-1557704107-66415f7877d0" alt="London lifestyle" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1>Lifestyle Insights</h1>
+        <p>Exclusive content, insider tips, and luxury lifestyle inspiration from London's premier lifestyle experts</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Post -->
+  <section class="featured-post">
+    <div class="container">
+      <div class="featured-card fade-in">
+        <div class="featured-image">
+          <img src={blogPosts[0].image} alt={blogPosts[0].title} />
+          <div class="featured-badge">Featured</div>
+        </div>
+        <div class="featured-content">
+          <div class="post-meta">
+            <span class="category">{blogPosts[0].category}</span>
+            <span class="date">{blogPosts[0].date}</span>
+            <span class="read-time">{blogPosts[0].readTime}</span>
+          </div>
+          <h2>{blogPosts[0].title}</h2>
+          <p>{blogPosts[0].excerpt}</p>
+          <a href={`/blog/${blogPosts[0].id}`} class="btn btn-primary">Read Full Article</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="blog-grid-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Latest Articles</h2>
+        <p>Stay updated with the latest insights in luxury lifestyle and London culture</p>
+      </div>
+      
+      <div class="blog-grid">
+        {blogPosts.slice(1).map((post) => (
+          <article class="blog-card fade-in">
+            <div class="blog-image">
+              <img src={post.image} alt={post.title} />
+              <div class="blog-overlay">
+                <a href={`/blog/${post.id}`} class="read-more-btn">Read Article</a>
+              </div>
+            </div>
+            <div class="blog-content">
+              <div class="post-meta">
+                <span class="category">{post.category}</span>
+                <span class="date">{post.date}</span>
+                <span class="read-time">{post.readTime}</span>
+              </div>
+              <h3>{post.title}</h3>
+              <p>{post.excerpt}</p>
+              <a href={`/blog/${post.id}`} class="read-more-link">Continue Reading →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content fade-in">
+        <h2>Stay Connected</h2>
+        <p>Subscribe to receive exclusive lifestyle insights, event invitations, and insider tips from Elite Lifestyle London</p>
+        <form class="newsletter-form">
+          <div class="form-group">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </div>
+          <p class="newsletter-note">No spam, just premium content. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Explore by Category</h2>
+        <p>Find content that matches your interests</p>
+      </div>
+      
+      <div class="categories-grid">
+        <div class="category-card fade-in">
+          <div class="category-icon">🏛️</div>
+          <h3>Exclusive Experiences</h3>
+          <p>Hidden gems and exclusive access opportunities in London</p>
+          <a href="/blog/category/exclusive-experiences" class="category-link">Explore →</a>
+        </div>
+        
+        <div class="category-card fade-in">
+          <div class="category-icon">🎭</div>
+          <h3>Event Planning</h3>
+          <p>Tips and insights for creating memorable luxury events</p>
+          <a href="/blog/category/event-planning" class="category-link">Explore →</a>
+        </div>
+        
+        <div class="category-card fade-in">
+          <div class="category-icon">✈️</div>
+          <h3>Luxury Travel</h3>
+          <p>Premium travel experiences and destination insights</p>
+          <a href="/blog/category/luxury-travel" class="category-link">Explore →</a>
+        </div>
+        
+        <div class="category-card fade-in">
+          <div class="category-icon">🧠</div>
+          <h3>Lifestyle Psychology</h3>
+          <p>Understanding the psychology behind luxury choices</p>
+          <a href="/blog/category/lifestyle-psychology" class="category-link">Explore →</a>
+        </div>
+        
+        <div class="category-card fade-in">
+          <div class="category-icon">🌟</div>
+          <h3>Personal Development</h3>
+          <p>Building influence and social capital in elite circles</p>
+          <a href="/blog/category/personal-development" class="category-link">Explore →</a>
+        </div>
+        
+        <div class="category-card fade-in">
+          <div class="category-icon">🍂</div>
+          <h3>Seasonal Living</h3>
+          <p>Making the most of London's luxury offerings year-round</p>
+          <a href="/blog/category/seasonal-living" class="category-link">Explore →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .blog-hero {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  .hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.8) 0%, rgba(6, 182, 212, 0.6) 100%);
+    z-index: -1;
+  }
+
+  .hero-content {
+    text-align: center;
+    color: white;
+    max-width: 600px;
+  }
+
+  .hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .hero-content p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+
+  .featured-post {
+    padding: var(--section-padding);
+    background: var(--neutral-50);
+  }
+
+  .featured-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .featured-image {
+    position: relative;
+    height: 400px;
+  }
+
+  .featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .featured-content {
+    padding: 2rem;
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .category {
+    background: var(--primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-weight: 500;
+  }
+
+  .date, .read-time {
+    color: var(--neutral-600);
+  }
+
+  .featured-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--neutral-900);
+  }
+
+  .featured-content p {
+    color: var(--neutral-600);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .blog-grid-section {
+    padding: var(--section-padding);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-header p {
+    font-size: 1.125rem;
+    color: var(--neutral-600);
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .blog-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+  }
+
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .blog-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+
+  .blog-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 99, 235, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+  }
+
+  .blog-card:hover .blog-overlay {
+    opacity: 1;
+  }
+
+  .blog-card:hover .blog-image img {
+    transform: scale(1.1);
+  }
+
+  .read-more-btn {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+
+  .read-more-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .blog-content {
+    padding: 2rem;
+  }
+
+  .blog-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--neutral-900);
+  }
+
+  .blog-content p {
+    color: var(--neutral-600);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .read-more-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+
+  .read-more-link:hover {
+    color: var(--primary-dark);
+  }
+
+  .newsletter-section {
+    padding: var(--section-padding);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+  }
+
+  .newsletter-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .newsletter-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .newsletter-content > p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .newsletter-form .form-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .newsletter-form input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+  }
+
+  .newsletter-form input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+  }
+
+  .newsletter-note {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin: 0;
+  }
+
+  .categories-section {
+    padding: var(--section-padding);
+    background: var(--neutral-50);
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .category-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+  }
+
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .category-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .category-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--neutral-900);
+  }
+
+  .category-card p {
+    color: var(--neutral-600);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .category-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+
+  .category-link:hover {
+    color: var(--primary-dark);
+  }
+
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .featured-card {
+      grid-template-columns: 1fr;
+    }
+    
+    .featured-content {
+      padding: 1.5rem;
+    }
+    
+    .blog-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .newsletter-form .form-group {
+      flex-direction: column;
+    }
+    
+    .categories-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Newsletter form submission
+    const newsletterForm = document.querySelector('.newsletter-form');
+    
+    newsletterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = this.querySelector('input[type="email"]').value;
+      const submitBtn = this.querySelector('button[type="submit"]');
+      
+      // Show loading state
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Subscribing...';
+      submitBtn.disabled = true;
+      
+      // Simulate subscription (replace with actual form handling)
+      setTimeout(() => {
+        alert('Thank you for subscribing! You\'ll receive our latest insights soon.');
+        
+        // Reset form
+        this.reset();
+        
+        // Reset button state
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }, 2000);
+    });
+  });
+</script>
