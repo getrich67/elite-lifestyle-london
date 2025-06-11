@@ -1,6 +1,6 @@
 {
-  "name": "@example/starter",
-  "version": "0.0.1",
+  "name": "london-lifestyle-agency",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -8,10 +8,12 @@
     "build": "astro build",
     "preview": "astro preview"
   },
-  "devDependencies": {
+  "dependencies": {
     "@astrojs/preact": "^1.0.2",
     "@astrojs/sitemap": "^1.0.0",
-    "@netlify/netlify-marketing-tokens": "^1.1.0",
     "astro": "^2.0.0"
+  },
+  "devDependencies": {
+    "@netlify/netlify-marketing-tokens": "^1.1.0"
   }
 }
