@@ -6,3 +6,12 @@ $ astro dev
   ┃ Network  use --host to expose
   
 01:17:38 AM [astro] update /dev.log
+01:27:55 AM [astro] update /.gitconfig
+01:27:55 AM [astro] update /dev.log
+01:34:43 AM [astro] Configuration updated. Restarting...
+
+01:34:43 AM [astro] update /dev.log
+01:35:09 AM [astro] Configuration updated. Restarting...
+
+01:35:09 AM [astro] update /package.json
+01:35:09 AM [astro] update /dev.log
