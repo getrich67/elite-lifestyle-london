@@ -1,108 +1,493 @@
 ---
-import Layout from '../components/layout.astro';
+import Layout from '../components/Layout.astro';
 ---
 
-<style>
-.steps {
-  background: var(--light);
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: min(90vw, 250px);
-  justify-content: center;
-  margin-top: 3rem;
-  padding: 5rem 5vw;
-  width: 100vw;
-}
-
-@media (min-width: 550px) {
-  .steps {
-    grid-template-columns: repeat(2, min(calc(50% - 1rem), 250px));
-  }
-}
-
-@media (min-width: 1050px) {
-  .steps {
-    grid-template-columns: repeat(4, min(calc(25% - 1.5rem), 250px));
-  }
-}
-
-.step {
-  background: var(--white);
-  border: 1px solid var(--lightBorder);
-  border-radius: var(--card-radius);
-  display: flex;
-  flex-direction: column;
-  font-size: 0.75rem;
-  padding: 1rem 1.5rem 1.5rem;
-  text-align: left;
-  box-shadow: 0 2px 4px rgb(14 30 37 / 12%);
-}
-
-.stepHeading {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-
-</style>
-
 <Layout
-  title="Netlify Feature Tour"
-  description="This is a small site to show the most powerful features of Netlify quickly!"
-  home
+  title="Elite Lifestyle London - Premier Concierge Services"
+  description="London's most exclusive lifestyle management and concierge service. Bespoke solutions for discerning clients who demand excellence."
+  home={true}
 >
-  <main class="steps">
-    <section class="step">
-      <h2 class="stepHeading">Deploy Previews</h2>
-      <p>
-        Every pull request is automatically built in an
-        identical-to-production environment for
-        <strong>painless QA, feedback, and review.</strong>
-      </p>
-      <a href="/deploy-previews" class="button">
-        Learn more <span class="sr-only">about Deploy Previews</span>
-      </a>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-background">
+      <img src="https://images.unsplash.com/photo-1557704107-66415f7877d0" alt="London skyline at night" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content fade-in">
+        <h1 class="hero-title">
+          Elevate Your <span class="gradient-text">Lifestyle</span><br>
+          in London
+        </h1>
+        <p class="hero-subtitle">
+          Bespoke concierge services for discerning clients who demand nothing but excellence. 
+          Experience the pinnacle of luxury lifestyle management.
+        </p>
+        <div class="hero-buttons">
+          <a href="/contact" class="btn btn-primary">Start Your Journey</a>
+          <a href="/services" class="btn btn-secondary">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="step">
-      <h2 class="stepHeading">Instant Rollbacks</h2>
-      <p>
-        Confidently ship to production with the knowledge that it’s a
-        one-click operation to roll back to a previous version of the site.
-        <strong>Instant disaster recovery!</strong>
-      </p>
-      <a href="/instant-rollbacks" class="button">
-        Learn more
-        <span class="sr-only">about Instant Rollbacks</span>
-      </a>
-    </section>
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-content fade-in">
+          <h2>Crafting Extraordinary Experiences</h2>
+          <p class="about-lead">
+            For over a decade, Elite Lifestyle London has been the trusted partner for London's most discerning individuals, 
+            providing unparalleled concierge services that transform the ordinary into the extraordinary.
+          </p>
+          <p>
+            Our team of experienced lifestyle managers understands that true luxury lies in the details. 
+            From securing impossible restaurant reservations to orchestrating once-in-a-lifetime experiences, 
+            we handle every aspect of your lifestyle with precision and discretion.
+          </p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Elite Clients</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">24/7</span>
+              <span class="stat-label">Availability</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image fade-in">
+          <img src="https://images.unsplash.com/flagged/photo-1555728750-55f4db213833" alt="Professional service" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="step">
-      <h2 class="stepHeading">Netlify Functions</h2>
-      <p>
-        <strong>Serverless functions are superpowers for web developers!</strong>
-        Securely handle server-like requirements at any scale with no
-        provisioning, scaling, or ops overhead.
-      </p>
-      <a href="/functions" class="button">
-      Learn more
-      <span class="sr-only">about Netlify Functions</span>
-      </a>
-    </section>
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2>Exclusive Services</h2>
+        <p>Tailored solutions for every aspect of your lifestyle</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card fade-in glass-effect">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1647923320920-9c9da74f7419" alt="Luxury Transportation" />
+          </div>
+          <div class="service-content">
+            <h3>Luxury Transportation</h3>
+            <p>Private jets, luxury cars, and yacht charters for seamless travel experiences.</p>
+          </div>
+        </div>
+        <div class="service-card fade-in glass-effect">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13" alt="Event Planning" />
+          </div>
+          <div class="service-content">
+            <h3>Exclusive Events</h3>
+            <p>Bespoke event planning and access to London's most exclusive venues.</p>
+          </div>
+        </div>
+        <div class="service-card fade-in glass-effect">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1659096074910-292765b21070" alt="Personal Concierge" />
+          </div>
+          <div class="service-content">
+            <h3>Personal Concierge</h3>
+            <p>24/7 personal assistance for all your lifestyle and business needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="step">
-      <h2 class="stepHeading">Netlify Forms</h2>
-      <p>
-        Handle user input with a single line of code. Netlify Forms allow
-        any HTML form to
-        <strong>
-            accept submissions, send notification emails, and trigger custom events.
-        </strong>
-      </p>
-      <a href="/netlify-forms" class="button">
-        Learn more <span class="sr-only">about Netlify Forms</span>
-      </a>
-    </section>
-  </main>
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="testimonials-background">
+      <img src="https://images.pexels.com/photos/2166920/pexels-photo-2166920.jpeg" alt="Elegant background" />
+      <div class="testimonials-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="section-header fade-in">
+        <h2 style="color: white;">What Our Clients Say</h2>
+        <p style="color: rgba(255,255,255,0.8);">Testimonials from our valued clients</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in glass-effect">
+          <p>"Elite Lifestyle transformed my London experience completely. Their attention to detail and ability to make the impossible happen is truly remarkable."</p>
+          <div class="testimonial-author">
+            <strong>Victoria Sterling</strong>
+            <span>CEO, Sterling Investments</span>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in glass-effect">
+          <p>"The team's discretion and professionalism are unmatched. They handle every aspect of my lifestyle with such care and precision."</p>
+          <div class="testimonial-author">
+            <strong>James Worthington</strong>
+            <span>Entrepreneur</span>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in glass-effect">
+          <p>"From last-minute travel arrangements to exclusive dining experiences, they never fail to exceed expectations."</p>
+          <div class="testimonial-author">
+            <strong>Isabella Chambers</strong>
+            <span>Fashion Designer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content fade-in">
+        <h2>Ready to Elevate Your Lifestyle?</h2>
+        <p>Join London's elite and experience the difference that true luxury lifestyle management can make.</p>
+        <a href="/contact" class="btn btn-primary btn-large">Get Started Today</a>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  /* Hero Section */
+  .hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  .hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.8) 0%, rgba(6, 182, 212, 0.6) 100%);
+    z-index: -1;
+  }
+
+  .hero-content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 0 2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* About Section */
+  .about-section {
+    padding: var(--section-padding);
+    background: var(--neutral-50);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--neutral-900);
+  }
+
+  .about-lead {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+
+  .about-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+
+  .about-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    font-family: var(--font-primary);
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--neutral-600);
+    font-weight: 500;
+  }
+
+  .about-image {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  /* Services Section */
+  .services-section {
+    padding: var(--section-padding);
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-header p {
+    font-size: 1.125rem;
+    color: var(--neutral-600);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .service-image {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+
+  .service-card:hover .service-image img {
+    transform: scale(1.05);
+  }
+
+  .service-content {
+    padding: 2rem;
+  }
+
+  .service-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--neutral-900);
+  }
+
+  .service-content p {
+    color: var(--neutral-600);
+    line-height: 1.6;
+  }
+
+  /* Testimonials Section */
+  .testimonials-section {
+    position: relative;
+    padding: var(--section-padding);
+    overflow: hidden;
+  }
+
+  .testimonials-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  .testimonials-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .testimonials-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(37, 99, 235, 0.8) 100%);
+    z-index: -1;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    color: white;
+    transition: var(--transition);
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .testimonial-card p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  .testimonial-author strong {
+    display: block;
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .testimonial-author span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: var(--section-padding);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+
+  .cta-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .btn-large {
+    padding: 1.25rem 3rem;
+    font-size: 1.125rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    color: white;
+  }
+
+  .btn-large:hover {
+    background: white;
+    color: var(--primary);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .about-stats {
+      justify-content: space-around;
+    }
+    
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
